@@ -5,8 +5,20 @@ import { CompType2, CompType } from './components/CompType';
 import Clock from './components/Clock';
 import StateTest from './components/StateTest';
 import CartSample from './components/CartSample';
+import LifeCycle from './components/LifeCycle';
 
 class App extends Component {
+  state = {
+    prop: "some prop"
+  }
+  componentDidMount() {
+    this.setState({ prop: "a new prop "})
+    setTimeout(() => {
+      this.setState({
+        prop: ""
+      })
+    }, 2000);
+  }
   formatName(user){
     return user.firstName + ' ' + user.lastName;
   }
@@ -31,6 +43,8 @@ class App extends Component {
         <StateTest></StateTest>
         {/* 条件与循环 */}
         <CartSample title="shoppingCart"></CartSample>
+        {/* 生命周期 */}
+        { this.state.prop && <LifeCycle prop="this.state.prop"></LifeCycle> }
       </div>
 
       // <div className="App">
