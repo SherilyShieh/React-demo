@@ -4,6 +4,7 @@ import './App.css';
 import { CompType2, CompType } from './components/CompType';
 import Clock from './components/Clock';
 import StateTest from './components/StateTest';
+import CartSample from './components/CartSample';
 
 class App extends Component {
   formatName(user){
@@ -28,6 +29,8 @@ class App extends Component {
         {/* State和状态改变setState */}
         <Clock></Clock>
         <StateTest></StateTest>
+        {/* 条件与循环 */}
+        <CartSample title="shoppingCart"></CartSample>
       </div>
 
       // <div className="App">
