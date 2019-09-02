@@ -9,6 +9,8 @@ export default class StateTest extends Component {
   // 直接修改state无法生效
   // this.state.counter += 1;
   //批量执行
+  // this.setState(obj, cb)
+  // this.setState(fn, cb)
   this.setState({counter: this.state.counter + 1});
   // this.setState({counter: this.state.counter + 1});
   // this.setState({counter: this.state.counter + 1});

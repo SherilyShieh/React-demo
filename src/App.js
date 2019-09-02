@@ -6,6 +6,10 @@ import Clock from './components/Clock';
 import StateTest from './components/StateTest';
 import CartSample from './components/CartSample';
 import LifeCycle from './components/LifeCycle';
+import AntdTest from './components/AntdTest';
+import CommentList from './components/CommentList';
+import Hoc from './components/Hoc';
+import Composition from './components/Composition';
 
 class App extends Component {
   state = {
@@ -45,6 +49,16 @@ class App extends Component {
         <CartSample title="shoppingCart"></CartSample>
         {/* 生命周期 */}
         { this.state.prop && <LifeCycle prop="this.state.prop"></LifeCycle> }
+
+        <AntdTest></AntdTest>
+
+        <CommentList></CommentList>
+
+        {/* 高阶组件 */}
+        <Hoc></Hoc>
+
+        {/* 组件复合 */}
+        <Composition></Composition>
       </div>
 
       // <div className="App">

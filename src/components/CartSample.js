@@ -104,7 +104,7 @@ export default class CartSample extends Component {
   )
  }
 }
-
+// 函数式组件
 function Cart({data, minus, add}) {
  return (
   <table>
