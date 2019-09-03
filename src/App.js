@@ -10,6 +10,8 @@ import AntdTest from './components/AntdTest';
 import CommentList from './components/CommentList';
 import Hoc from './components/Hoc';
 import Composition from './components/Composition';
+import HookTest from './components/HookTest';
+import ContextTest from './components/ContextTest';
 
 class App extends Component {
   state = {
@@ -59,6 +61,12 @@ class App extends Component {
 
         {/* 组件复合 */}
         <Composition></Composition>
+
+        {/* hook */}
+        <HookTest></HookTest>
+
+        {/* 跨组件通信 */}
+        <ContextTest></ContextTest>
       </div>
 
       // <div className="App">
