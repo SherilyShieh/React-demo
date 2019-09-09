@@ -24,16 +24,28 @@ class NormalLoginForm extends Component {
      />
     )}
    </Form.Item>
+   <Form.Item>
+    {getFieldDecorator("password", {
+     rules: [{ required: true, message: "please input your password!" }]
+    })(
+     <Input 
+     prefix={<Icon type="lock" style={{ color: "rgba(0,0,0,.25" }}/>}
+     placeholder="password"
+     />
+    )}
+   </Form.Item> 
+   <Form.Item>
+    <Button 
+     type="primary"
+     htmlType="submit"
+     className="login-form-button">
+     Log in
+    </Button>
+   </Form.Item>  
   </Form>
   );
  }
 }
-export default class AntdForm extends Component {
- render() {
-  return (
-   <div>
-    
-   </div>
-  )
- }
-}
+
+const WrappedNormalLoginForm = Form.create({ name: "normal_login" })(NormalLoginForm);
+export default WrappedNormalLoginForm;

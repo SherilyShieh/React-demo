@@ -12,6 +12,8 @@ import Hoc from './components/Hoc';
 import Composition from './components/Composition';
 import HookTest from './components/HookTest';
 import ContextTest from './components/ContextTest';
+import WrappedNormalLoginForm from './components/AntdForm';
+import KForm from './components/KForm';
 
 class App extends Component {
   state = {
@@ -67,6 +69,12 @@ class App extends Component {
 
         {/* 跨组件通信 */}
         <ContextTest></ContextTest>
+
+        {/* 表单示例 */}
+        <WrappedNormalLoginForm></WrappedNormalLoginForm>
+
+        {/* 自定义表单 */}
+        <KForm></KForm>
       </div>
 
       // <div className="App">

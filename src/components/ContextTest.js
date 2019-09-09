@@ -17,7 +17,7 @@ function Child(prop) {
 // 消费方法2： 使用hook消费
 function Child2() {
  const ctx = useContext(MyContext);
- return <di>Child2: {ctx.foo}</di>
+ return <div>Child2: {ctx.foo}</div>
 }
 
 // 使用class指定静态contextType
