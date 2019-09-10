@@ -14,6 +14,9 @@ import HookTest from './components/HookTest';
 import ContextTest from './components/ContextTest';
 import WrappedNormalLoginForm from './components/AntdForm';
 import KForm from './components/KForm';
+import ReduxTest from './components/ReduxTest';
+import { Provider } from 'react-redux';
+import store from './store/index';
 
 class App extends Component {
   state = {
@@ -75,6 +78,14 @@ class App extends Component {
 
         {/* 自定义表单 */}
         <KForm></KForm>
+
+        {/* redux */}
+        <Provider store={store}>
+          <ReduxTest></ReduxTest>
+        </Provider>
+
+
+        
       </div>
 
       // <div className="App">
